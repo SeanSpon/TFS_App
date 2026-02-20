@@ -15,9 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TaxFeeder Software | Professional Tax Preparation Software",
+  title: "Tax Feeder Software | Professional Tax Preparation Software",
   description:
-    "Professional tax preparation software for tax offices, preparers, and service bureaus. E-file ready, IRS compliant, with dedicated support.",
+    "Professional tax preparation software for tax offices, preparers, and service bureaus. Desktop, Online & Hosted solutions with dedicated support.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

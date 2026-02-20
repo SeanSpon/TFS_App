@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -32,12 +33,17 @@ export default function Navbar() {
 
         {/* Main nav */}
         <nav className="flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gold rounded-sm flex items-center justify-center font-bold text-navy text-sm">
-              TF
-            </div>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Tax Feeder Software"
+              width={44}
+              height={44}
+              className="rounded-full"
+              priority
+            />
             <span className="text-xl font-bold tracking-tight">
-              TaxFeeder<span className="text-gold">Software</span>
+              Tax Feeder<span className="text-gold"> Software</span>
             </span>
           </Link>
 
