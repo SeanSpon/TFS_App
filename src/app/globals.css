@@ -116,3 +116,93 @@ html {
   background-image: radial-gradient(circle, rgba(201, 168, 76, 0.06) 1px, transparent 1px);
   background-size: 32px 32px;
 }
+
+/* ── Admin Dashboard Utilities ─────────────────────────────── */
+
+.admin-sidebar {
+  background: linear-gradient(180deg, #0f1b2d 0%, #0a1220 100%);
+}
+
+.admin-stat-card {
+  transition: all 0.2s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.admin-table-row {
+  transition: background-color 0.15s ease;
+}
+
+.admin-table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.admin-input {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  transition: all 0.15s ease;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: #c9a84c;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+.admin-btn-primary {
+  background: #c9a84c;
+  color: #0f1b2d;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.admin-btn-primary:hover {
+  background: #d4b96a;
+}
+
+.admin-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Toggle switch */
+.toggle-track {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #e2e8f0;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.toggle-track.active {
+  background: #c9a84c;
+}
+
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-track.active .toggle-thumb {
+  transform: translateX(20px);
+}
