@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
-import { sql } from "@/lib/db";
+import { getSQL } from "@/lib/db";
 
 export async function GET() {
+  const sql = getSQL();
   const rows = await sql`SELECT * FROM leads ORDER BY date DESC, id DESC`;
   return NextResponse.json(rows);
 }
 
 export async function POST(request: Request) {
+  const sql = getSQL();
   const body = await request.json();
   const { name, company, email, phone, city, state, current_software, num_returns, source, notes } = body;
 

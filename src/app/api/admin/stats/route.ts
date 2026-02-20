@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
-import { sql } from "@/lib/db";
+import { getSQL } from "@/lib/db";
 
 export async function GET() {
+  const sql = getSQL();
   const [totalResult, weekResult, convertedResult, sourceResult] = await Promise.all([
     sql`SELECT COUNT(*) as count FROM leads`,
     sql`SELECT COUNT(*) as count FROM leads WHERE date >= CURRENT_DATE - INTERVAL '7 days'`,
