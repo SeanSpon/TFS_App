@@ -10,8 +10,8 @@ const navLinks = [
   { href: "/software", label: "Software" },
   { href: "/features", label: "Features" },
   { href: "/reseller", label: "Become a Reseller" },
+  { href: "/about", label: "About" },
   { href: "/support", label: "Support" },
-  { href: "/contact", label: "Book a Demo" },
 ];
 
 export default function Navbar() {
