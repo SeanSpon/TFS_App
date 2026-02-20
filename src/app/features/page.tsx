@@ -10,23 +10,34 @@ const featureCategories = [
   {
     title: "Tax Preparation Tools",
     features: [
-      "Individual returns (1040, 1040-SR, 1040-NR)",
-      "Business returns (1120, 1120S, 1065, 1041)",
+      "Individual returns (1040, 1040-NR, 1040-SS)",
+      "Business returns (1120, 1120-S, 1120-H, 1065, 1041)",
       "Nonprofit returns (990 series)",
-      "All 50 states + DC included",
+      "All individual and business state returns included",
       "Smart data entry with auto-calculations",
-      "Prior-year data import",
+      "Desktop, Online & Hosted platform options",
     ],
   },
   {
     title: "E-File & Compliance",
     features: [
-      "IRS-authorized e-file provider",
       "Federal and state e-file in one step",
       "Real-time acknowledgment tracking",
       "Built-in error checking before submission",
       "Amended return support",
       "Extension filing (4868, 7004)",
+      "Desktop, Online & Hosted e-file options",
+    ],
+  },
+  {
+    title: "Data Conversions",
+    features: [
+      "Drake & Drake Business conversion",
+      "ProSeries & ProSeries Business conversion",
+      "TaxSlayer & TaxSlayer Business conversion",
+      "TaxWise & TaxWise Business conversion",
+      "Prior-year client data import",
+      "Seamless onboarding from competitor software",
     ],
   },
   {
@@ -43,12 +54,12 @@ const featureCategories = [
   {
     title: "Bank Products & Revenue",
     features: [
-      "Refund transfer processing",
-      "Refund advance products",
-      "Real-time bank product status",
+      "Refund Advantage integration",
+      "Refundo integration",
+      "Republic integration",
+      "SBTPG integration",
+      "Real-time bank product status tracking",
       "Revenue tracking per preparer",
-      "Multiple bank partner options",
-      "Client-facing fee disclosures",
     ],
   },
   {

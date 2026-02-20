@@ -14,9 +14,12 @@ export default function Home() {
               The software your tax business{" "}
               <span className="text-gold">deserves.</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-white/70 mb-4 leading-relaxed max-w-2xl">
               TaxFeeder Software gives tax preparers, office owners, and service bureaus
               everything they need to file faster, earn more, and grow with confidence.
+            </p>
+            <p className="text-sm text-white/50 mb-10">
+              Desktop, Online &amp; Hosted solutions &mdash; Packages start at $599 with volume discounts available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -103,8 +106,9 @@ export default function Home() {
               </h2>
               <p className="text-slate leading-relaxed mb-4">
                 TaxFeeder is professional tax preparation software designed for people who do
-                taxes for a living. It handles individual, corporate, and state returns
-                with built-in e-file, compliance checks, and office management tools.
+                taxes for a living. Available as Desktop, Online, and Hosted solutions, it handles
+                individual, business, and state returns with built-in e-file, compliance checks,
+                and office management tools.
               </p>
               <p className="text-slate leading-relaxed">
                 No complicated setup. No surprise fees mid-season. You get the software,
@@ -115,12 +119,12 @@ export default function Home() {
             <div className="bg-navy rounded-2xl p-8 md:p-12 text-white">
               <div className="space-y-6">
                 {[
-                  { num: "01", text: "Individual & corporate returns" },
-                  { num: "02", text: "All 50 states supported" },
-                  { num: "03", text: "Built-in e-file & compliance" },
+                  { num: "01", text: "Individual returns (1040, 1040-NR, 1040-SS) + all states" },
+                  { num: "02", text: "Business returns (1120, 1120-S, 1120-H, 1065, 1041, 990) + states" },
+                  { num: "03", text: "Desktop, Online & Hosted platforms" },
                   { num: "04", text: "Office & preparer management" },
-                  { num: "05", text: "Bank product integrations" },
-                  { num: "06", text: "Year-round dedicated support" },
+                  { num: "05", text: "Bank products via Refund Advantage, Refundo, Republic & SBTPG" },
+                  { num: "06", text: "Data conversions from Drake, ProSeries, TaxSlayer & TaxWise" },
                 ].map((item) => (
                   <div key={item.num} className="flex items-center gap-4">
                     <span className="text-gold font-mono text-sm font-bold">{item.num}</span>
@@ -207,11 +211,11 @@ export default function Home() {
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "White-label software with your branding",
-                  "Set your own pricing and keep your margins",
-                  "Earn service bureau fees on every bank product",
-                  "Dedicated onboarding and training",
-                  "Year-round support for you and your clients",
+                  "Co-branded software with your branding",
+                  "Multiple revenue streams — software, fees & incentives",
+                  "Coaching, support & transparent accounting",
+                  "Ancillary programs: Tradeline Services, Small Business Lending & more",
+                  "Clear and transparent payout data",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -229,10 +233,10 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-6">Reseller revenue streams</h3>
               <div className="space-y-4">
                 {[
-                  { stream: "Software License Sales", desc: "Sell software packages at your own price point" },
-                  { stream: "Service Bureau Fees", desc: "Earn $50–$99 per funded bank product" },
-                  { stream: "Renewal Revenue", desc: "Annual renewals from your preparer network" },
-                  { stream: "Add-On Services", desc: "Training, support packages, and consulting" },
+                  { stream: "Software Sales Margins", desc: "Aggressive pricing lets you earn on every software sale" },
+                  { stream: "Flexible Fee Buckets", desc: "Service Bureau, Transmitter, E-File & Tech Fees — $25–$75+ per return" },
+                  { stream: "Volume Incentives", desc: "Earn more as your network grows with volume-based programs" },
+                  { stream: "Ancillary Programs", desc: "AuditAllies, iPROTECT, Tradeline Services & Small Business Lending" },
                 ].map((item) => (
                   <div key={item.stream} className="bg-white/5 rounded-lg p-4">
                     <h4 className="font-semibold text-gold mb-1">{item.stream}</h4>
@@ -250,10 +254,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { stat: "IRS", label: "Authorized E-File Provider" },
-              { stat: "50", label: "States Supported" },
-              { stat: "24/7", label: "Peak Season Support" },
-              { stat: "100%", label: "Cloud & Desktop Ready" },
+              { stat: "7+", label: "Years in Business" },
+              { stat: "40K+", label: "Returns Processed" },
+              { stat: "100+", label: "Locations Supported" },
+              { stat: "50", label: "States Covered" },
             ].map((item) => (
               <div key={item.label}>
                 <div className="text-4xl font-bold text-gold mb-2">{item.stat}</div>

@@ -18,9 +18,9 @@ export default function ResellerPage() {
               Build your own tax software brand
             </h1>
             <p className="text-lg text-white/70 leading-relaxed mb-8">
-              Stop paying for someone else&apos;s software. With the TaxFeeder Reseller Program, you
-              distribute tax software under your own name, set your own prices, and keep the revenue.
-              We build and maintain the software. You build the business.
+              Tax Feeder Software provides resellers a suite of software tools and services, backed by an
+              experienced team, to facilitate the growth of their service bureau. We invest in the
+              infrastructure so you can focus on growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 rounded-md text-center transition-colors">
@@ -41,19 +41,20 @@ export default function ResellerPage() {
             <div>
               <h2 className="text-3xl font-bold text-navy mb-6">What is a TaxFeeder Reseller?</h2>
               <p className="text-slate leading-relaxed mb-4">
-                A TaxFeeder Reseller (also called a Service Bureau) is someone who distributes
-                tax preparation software to other tax preparers under their own brand. Think of
-                it like this: we build the software, you put your name on it and sell it.
+                A TaxFeeder Reseller (Service Bureau) distributes tax preparation software to
+                other tax preparers with co-branding solutions. We build the software, maintain the
+                infrastructure, and provide the support &mdash; you build the business.
               </p>
               <p className="text-slate leading-relaxed mb-4">
-                Your clients see your brand, your logo, and your company name — not ours. You set
-                the pricing. You control the relationships. And you earn revenue from every preparer
-                in your network, on every return they file, year after year.
+                We help service bureaus in key areas: multiple software platform options, co-branding
+                solutions, customer support for reseller subsites, coaching, and clear transparent
+                accounting data to help with payouts.
               </p>
               <p className="text-slate leading-relaxed">
-                You don&apos;t need to be a developer, and you don&apos;t need a massive budget.
-                You need drive, a network (or the ability to build one), and the TaxFeeder
-                platform behind you.
+                Founded by Jason Hawkins with over 20 years of tax industry experience &mdash; from
+                banking and software to running retail tax offices and scaling a successful service
+                bureau operation &mdash; Tax Feeder Software supports more than 100 locations and
+                processes tens of thousands of returns annually.
               </p>
             </div>
             <div className="bg-off-white rounded-2xl p-8">
@@ -91,24 +92,24 @@ export default function ResellerPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Software Sales",
-                amount: "You set the price",
-                desc: "Sell software licenses to tax preparers at your own price. The spread between your cost and retail price is pure margin.",
+                title: "Software Sales Margins",
+                amount: "You control the pricing",
+                desc: "Aggressive software pricing allows you to earn revenue on your software sales margins. You set the price, you keep the spread.",
               },
               {
-                title: "Service Bureau Fees",
-                amount: "$50–$99 / return",
-                desc: "Every time a preparer in your network processes a bank product, a fee is paid directly to you — in real time.",
+                title: "Flexible Fee Buckets",
+                amount: "$25–$75+ per return",
+                desc: "Multiple fee buckets available: Service Bureau, Transmitter, E-File, and Tech Fee — all customizable add-ons on subsite returns.",
               },
               {
-                title: "Annual Renewals",
-                amount: "Recurring revenue",
-                desc: "Your preparers renew every year. This isn't a one-time sale — it's a business that compounds.",
+                title: "Volume Incentive Programs",
+                amount: "Scales with growth",
+                desc: "Volume incentive programs reward you as your network grows. The more returns your subsites process, the more you earn.",
               },
               {
-                title: "Add-On Revenue",
+                title: "Ancillary Programs",
                 amount: "Year-round income",
-                desc: "Training packages, consulting, technology fees, and audit protection products generate off-season revenue.",
+                desc: "Additional revenue through AuditAllies (Audit Assistance), iPROTECT (ID Theft Protection), Tradeline Services (Credit Boosting), and Small Business Lending.",
               },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-xl p-6">
@@ -119,10 +120,12 @@ export default function ResellerPage() {
             ))}
           </div>
           <div className="mt-12 bg-gold/10 border border-gold/30 rounded-xl p-6 text-center max-w-3xl mx-auto">
-            <p className="text-gold font-semibold text-lg mb-2">Example scenario</p>
+            <p className="text-gold font-semibold text-lg mb-2">Your earnings, your way</p>
             <p className="text-white/70 text-sm">
-              10 preparers in your network, each processing 100 returns with bank products at $75/return in
-              service bureau fees = <span className="text-gold font-bold">$75,000 in fee revenue alone</span> — before software sales or renewals.
+              Each reseller is unique based on how they mix fees on subsite tax returns. The range can be
+              broad, but <span className="text-gold font-bold">$25–$75+ per return is common</span> across fee
+              buckets — before software margins, volume incentives, and ancillary program revenue.
+              Tax Feeder never takes any percentage of your subsites&apos; tax prep fees.
             </p>
           </div>
         </div>
@@ -136,15 +139,15 @@ export default function ResellerPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "White-Label Software", desc: "Your logo, your brand name, your colors. Clients see your company — not ours." },
-              { title: "Reseller Dashboard", desc: "Track your preparers, monitor return volume, manage licenses, and view revenue — all in one place." },
-              { title: "Onboarding & Setup", desc: "We handle the technical buildout. Your branded software is ready in days, not weeks." },
-              { title: "Training & Resources", desc: "Training materials for you and your preparers. Get everyone up to speed fast." },
-              { title: "Dedicated Support Line", desc: "A support phone line for your clients, staffed by our team. They call your branded number, we answer." },
-              { title: "Pricing Control", desc: "You decide what to charge. Set your own software fees, service fees, and package prices." },
-              { title: "Bank Product Access", desc: "Your preparers get full access to refund transfers, advances, and financial products." },
-              { title: "Marketing Support", desc: "Templates, social media assets, and guidance to help you recruit and retain preparers." },
-              { title: "No Per-Seat Limits", desc: "Add as many preparers to your network as you want. Your growth isn't capped by licensing." },
+              { title: "Multiple Software Platforms", desc: "Desktop, Online, and Hosted solutions — choose the platform that fits your network best." },
+              { title: "Co-Branding Solutions", desc: "Your brand on the software your subsites use. Professional co-branding that builds your business identity." },
+              { title: "Customer Support for Subsites", desc: "Your subsites get dedicated customer support from our experienced team — making you look great." },
+              { title: "Coaching & Guidance", desc: "Benefit from 20+ years of tax industry experience. We help you become a better operator and grow smarter." },
+              { title: "Transparent Accounting", desc: "Clear and transparent accounting data to help you manage payouts and track every revenue stream." },
+              { title: "Bank Product Integrations", desc: "Access to Refund Advantage, Refundo, Republic, and SBTPG — multiple bank partner options for your subsites." },
+              { title: "Revenue-Enhancing Programs", desc: "AuditAllies, iPROTECT, Tradeline Services, and Small Business Lending — additional income streams beyond software." },
+              { title: "Data Conversions", desc: "Bring subsites from Drake, ProSeries, TaxSlayer, TaxWise, and their business variants. Easy switching." },
+              { title: "Scalable Growth Model", desc: "Our plug-and-play infrastructure means when we innovate, you innovate. When we grow, you grow." },
             ].map((item) => (
               <div key={item.title} className="border border-gray-200 rounded-xl p-6 hover:border-gold/50 transition-colors">
                 <h3 className="text-lg font-bold text-navy mb-2">{item.title}</h3>
@@ -158,23 +161,33 @@ export default function ResellerPage() {
       {/* Social Proof Placeholder */}
       <section className="py-20 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl font-bold text-navy mb-4">Hear from our resellers</h2>
+          <h2 className="text-3xl font-bold text-navy mb-4">What our partners say</h2>
           <p className="text-slate mb-12 max-w-xl mx-auto">
-            Tax professionals across the country are building their own software brands with TaxFeeder.
+            Tax professionals across the country are growing their businesses with Tax Feeder Software.
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
-              { quote: "I went from paying for software to selling it. The reseller program changed my entire business model.", name: "Reseller Testimonial", location: "Coming Soon" },
-              { quote: "The support team makes it easy. My preparers call the branded line and get real help — that makes me look good.", name: "Reseller Testimonial", location: "Coming Soon" },
-              { quote: "Between software sales and bank product fees, I made back my investment in the first month.", name: "Reseller Testimonial", location: "Coming Soon" },
+              {
+                quote: "Tax Feeder Software has been an essential part of growing my service bureau. They've provided great coaching and support plus I've been able to take advantage of different programs they offer to make money and help my business like Tradeline Services and their small business lending on top of the tax software offerings. Relationships and experience. Tax Feeder Software is my partner for my reseller business because I've built strong relationships with their team and I've benefited from their years of tax industry experience that have helped me be a better operator and let me focus on the things I do best. I would recommend them to anyone.",
+                name: "Joanesa",
+                location: "Mcdonough, GA",
+                type: "Service Bureau Reseller",
+              },
+              {
+                quote: "Tax Feeder Software is easy to use and to train my preparers on. Plus, I'm always able to get in touch with someone knowledgeable anytime I have questions or need help. I've grown my business from 50 returns to more than 1,000 returns with the help of Tax Feeder Software. They provide great advice, tools and customer service that have been essential to the growth of my business. In addition to great software and service, I have a relationship with Tax Feeder Software and trust them as a partner in my success. They're transparent and I receive my add-on fees and incentives when promised.",
+                name: "Andrey",
+                location: "El Paso, TX",
+                type: "Tax Office Owner",
+              },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 border border-gray-100 text-left">
+              <div key={i} className="bg-white rounded-xl p-8 border border-gray-100 text-left">
                 <svg className="w-8 h-8 text-gold/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <p className="text-navy/80 text-sm leading-relaxed mb-4 italic">&ldquo;{item.quote}&rdquo;</p>
                 <p className="text-navy font-semibold text-sm">{item.name}</p>
                 <p className="text-slate text-xs">{item.location}</p>
+                <p className="text-gold text-xs font-medium mt-1">{item.type}</p>
               </div>
             ))}
           </div>

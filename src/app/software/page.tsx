@@ -18,8 +18,9 @@ export default function SoftwarePage() {
               Everything you need to run a tax business
             </h1>
             <p className="text-lg text-white/70 leading-relaxed">
-              TaxFeeder is a complete tax preparation platform — individual returns, corporate
-              returns, all 50 states, e-file, office management, and bank products. One software, no gaps.
+              TaxFeeder offers Desktop, Online, and Hosted solutions — individual returns, business
+              returns, all 50 states, e-file, office management, and bank products. One platform, no gaps.
+              Packages start at $599 with volume discounts available.
             </p>
           </div>
         </div>
@@ -40,8 +41,8 @@ export default function SoftwarePage() {
                 checks catch errors before they become problems.
               </p>
               <p className="text-slate leading-relaxed">
-                Whether you run a desktop setup in your office or need cloud access from multiple
-                locations, TaxFeeder works where you work. And every package comes with the support
+                TaxFeeder offers Desktop, Online, and Hosted solutions &mdash; choose the platform
+                that works for your operation. And every package comes with the support
                 that matters most: real people who pick up the phone during tax season.
               </p>
             </div>
@@ -91,12 +92,12 @@ export default function SoftwarePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Federal Returns", desc: "1040, 1120, 1120S, 1065, 1041, 990 — all major form types for individual and business returns." },
-              { title: "All 50 State Returns", desc: "State returns included at no extra charge. No per-state add-on fees during filing season." },
-              { title: "E-File", desc: "IRS-authorized electronic filing built in. Submit federal and state returns with real-time acknowledgment tracking." },
+              { title: "Individual Returns", desc: "1040, 1040-NR, 1040-SS plus all individual state returns. Full coverage for individual tax preparation." },
+              { title: "Business Returns", desc: "1120, 1120-S, 1120-H, 1065, 1041, 990 plus all business state returns. Complete business filing support." },
+              { title: "Bank Product Integrations", desc: "Integrated with Refund Advantage, Refundo, Republic, and SBTPG for refund transfers, advances, and financial products." },
+              { title: "Data Conversions", desc: "Switch easily from Drake, ProSeries, TaxSlayer, or TaxWise — including their business variants. We handle the conversion." },
               { title: "Office Management", desc: "Track preparers, manage clients, monitor return status, and run production reports from one dashboard." },
-              { title: "Bank Products", desc: "Integrated refund transfers, refund advances, and other financial products your clients expect." },
-              { title: "Data Import", desc: "Import prior-year client data to save time and reduce re-entry errors when clients come back." },
+              { title: "Multiple Platforms", desc: "Desktop, Online, and Hosted solutions. Choose the deployment that fits your office — or use all three." },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-6 border border-gray-100">
                 <h3 className="text-lg font-bold text-navy mb-2">{item.title}</h3>

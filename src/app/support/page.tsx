@@ -7,13 +7,14 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "How do I get started with TaxFeeder?", a: "Book a demo with our team. We'll walk you through the software, set up your account, and import your existing client data so you're ready to file." },
-  { q: "What forms does TaxFeeder support?", a: "TaxFeeder supports all major federal forms (1040, 1120, 1120S, 1065, 1041, 990) plus all 50 states. Both individual and business returns are included." },
-  { q: "Can I import data from my current software?", a: "Yes. We support data import from most major tax software platforms. Our team handles the conversion process for you during onboarding." },
+  { q: "How do I get started with TaxFeeder?", a: "Fill out our contact form and our team will call you directly. We'll walk you through the software, set up your account, and handle any data conversions so you're ready to file." },
+  { q: "What forms does TaxFeeder support?", a: "For individuals: 1040, 1040-NR, 1040-SS plus all individual state returns. For business: 1120, 1120-S, 1120-H, 1065, 1041, 990 plus all business state returns." },
+  { q: "Can I import data from my current software?", a: "Yes. Tax Feeder provides data conversions for Drake, Drake Business, ProSeries, ProSeries Business, TaxSlayer, TaxSlayer Business, TaxWise, and TaxWise Business." },
   { q: "What are the support hours?", a: "Standard support hours are Monday–Friday, 10am–6pm EST. During tax season (January–April), we offer extended hours including weekends." },
-  { q: "Is TaxFeeder cloud-based or desktop?", a: "TaxFeeder works in the cloud, so you can access it from any computer with an internet connection. No installations or updates to manage." },
-  { q: "What bank products are available?", a: "TaxFeeder integrates with bank partners to offer refund transfers, refund advance products, and other financial products for your clients." },
-  { q: "How does the reseller program work?", a: "As a reseller, you distribute TaxFeeder under your own brand. You set your own pricing, earn on every return filed, and build recurring revenue. Visit our Reseller page for full details." },
+  { q: "Is TaxFeeder cloud-based or desktop?", a: "TaxFeeder offers Desktop, Online, and Hosted solutions — choose the platform that works best for your operation, or use multiple options." },
+  { q: "What bank products are available?", a: "TaxFeeder integrates with Refund Advantage, Refundo, Republic, and SBTPG for refund transfers, refund advance products, and other financial products." },
+  { q: "How does the reseller program work?", a: "As a reseller (service bureau), you get co-branded software, multiple revenue streams including software margins, flexible fee buckets, volume incentives, and ancillary programs like Tradeline Services and Small Business Lending. Visit our Reseller page for full details." },
+  { q: "What does TaxFeeder cost?", a: "Packages start at $599 with volume discounts available. Contact us for a customized quote based on your business structure and size." },
   { q: "Is my client data secure?", a: "Yes. TaxFeeder uses encryption for data in transit and at rest, multi-factor authentication, automatic session timeouts, and complies with IRS Publication 4557 security requirements." },
 ];
 

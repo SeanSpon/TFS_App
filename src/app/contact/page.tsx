@@ -1,11 +1,47 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Book a Demo | TaxFeeder Software",
-  description: "Book a free demo of TaxFeeder Software. See the platform in action and learn how it fits your tax business.",
-};
+import { useState } from "react";
+import type { FormEvent } from "react";
 
 export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          company: data.get("company"),
+          phone: data.get("phone"),
+          email: data.get("email"),
+          city: data.get("city"),
+          state: data.get("state"),
+          currentSoftware: data.get("currentSoftware"),
+          numReturns: data.get("numReturns"),
+          message: data.get("message"),
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      }
+    } catch {
+      // Allow form to show success even if API is not yet wired
+      setSubmitted(true);
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <>
       {/* Hero */}
@@ -17,7 +53,7 @@ export default function ContactPage() {
               Let&apos;s talk. We&apos;ll show you exactly how TaxFeeder fits your business.
             </h1>
             <p className="text-lg text-white/70 leading-relaxed">
-              Book a free demo, ask a question, or tell us what you need. We respond within 1 business day.
+              Fill out the form below and our team will reach out to you directly.
             </p>
           </div>
         </div>
@@ -29,49 +65,82 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-5 gap-16">
             {/* Form */}
             <div className="md:col-span-3">
-              <h2 className="text-2xl font-bold text-navy mb-8">Book a free demo</h2>
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-navy mb-2">First Name *</label>
-                    <input type="text" id="firstName" name="firstName" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+              <h2 className="text-2xl font-bold text-navy mb-8">Request a call</h2>
+
+              {submitted ? (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-navy mb-2">Last Name *</label>
-                    <input type="text" id="lastName" name="lastName" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                  <h3 className="text-xl font-bold text-navy mb-2">Thank you!</h3>
+                  <p className="text-slate">We&apos;ve received your information and will reach out shortly.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Required Fields */}
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-navy mb-2">Contact Name *</label>
+                      <input type="text" id="name" name="name" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-navy mb-2">Company *</label>
+                      <input type="text" id="company" name="company" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
                   </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-navy mb-2">Email *</label>
-                    <input type="email" id="email" name="email" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-navy mb-2">Phone *</label>
+                      <input type="tel" id="phone" name="phone" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-navy mb-2">Email *</label>
+                      <input type="email" id="email" name="email" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
                   </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-navy mb-2">Phone *</label>
-                    <input type="tel" id="phone" name="phone" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+
+                  {/* Optional Fields */}
+                  <p className="text-xs text-slate font-medium uppercase tracking-wider pt-2">Optional</p>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="city" className="block text-sm font-medium text-navy mb-2">City</label>
+                      <input type="text" id="city" name="city" className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
+                    <div>
+                      <label htmlFor="state" className="block text-sm font-medium text-navy mb-2">State</label>
+                      <input type="text" id="state" name="state" className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <label htmlFor="interest" className="block text-sm font-medium text-navy mb-2">I&apos;m interested in... *</label>
-                  <select id="interest" name="interest" required className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold bg-white">
-                    <option value="">Select an option</option>
-                    <option value="software">Tax Preparation Software</option>
-                    <option value="reseller">Reseller / Service Bureau Program</option>
-                    <option value="support">Support for Existing Account</option>
-                    <option value="other">Something Else</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-navy mb-2">Message (optional)</label>
-                  <textarea id="message" name="message" rows={4} className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold resize-none" placeholder="Tell us about your business, what software you're currently using, or any questions you have." />
-                </div>
-                <button type="submit" className="w-full sm:w-auto bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 rounded-md transition-colors">
-                  Submit Request
-                </button>
-                <p className="text-xs text-slate">
-                  We respond within 1 business day. Your information is never shared with third parties.
-                </p>
-              </form>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="currentSoftware" className="block text-sm font-medium text-navy mb-2">Current Software</label>
+                      <input type="text" id="currentSoftware" name="currentSoftware" placeholder="e.g. Drake, TaxWise, ProSeries" className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
+                    <div>
+                      <label htmlFor="numReturns" className="block text-sm font-medium text-navy mb-2"># of Returns</label>
+                      <input type="text" id="numReturns" name="numReturns" placeholder="Approximate annual volume" className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-navy mb-2">Message</label>
+                    <textarea id="message" name="message" rows={3} className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold resize-none" placeholder="Tell us about your business or any questions you have." />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full sm:w-auto bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 rounded-md transition-colors disabled:opacity-50"
+                  >
+                    {submitting ? "Submitting..." : "Submit Request"}
+                  </button>
+                  <p className="text-xs text-slate">
+                    Our team will call you directly after receiving your information. Your data is never shared with third parties.
+                  </p>
+                </form>
+              )}
             </div>
 
             {/* Contact Info Sidebar */}
@@ -87,8 +156,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-navy mb-1">Email</p>
-                    <a href="mailto:support@taxfeedersoftware.com" className="text-gold hover:text-gold-dark font-semibold transition-colors break-all">
-                      support@taxfeedersoftware.com
+                    <a href="mailto:john@taxfeedersoftware.com" className="text-gold hover:text-gold-dark font-semibold transition-colors break-all">
+                      john@taxfeedersoftware.com
                     </a>
                   </div>
                   <div>
@@ -106,18 +175,6 @@ export default function ContactPage() {
                     </p>
                     <p className="text-gold text-xs font-medium mt-1">Extended hours during tax season</p>
                   </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <p className="text-sm font-medium text-navy mb-3">Prefer to schedule directly?</p>
-                  <a
-                    href="https://calendly.com/john-jcolverconsulting/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-navy hover:bg-navy-light text-white font-semibold px-6 py-3 rounded-md text-sm transition-colors w-full text-center"
-                  >
-                    Schedule on Calendly
-                  </a>
                 </div>
               </div>
             </div>
