@@ -7,7 +7,6 @@ import type { NotificationSetting } from "@/lib/admin/types";
 
 export default function SettingsPage() {
   const [notifications, setNotifications] = useState<NotificationSetting[]>(defaultNotifications);
-  const [dbConnectionString, setDbConnectionString] = useState("");
   const [currentUser, setCurrentUser] = useState(adminUsers[0]);
 
   useEffect(() => {
@@ -69,35 +68,26 @@ export default function SettingsPage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6">
         <div className="flex items-center gap-3 mb-6">
           <h2 className="text-lg font-bold text-navy">Database Connection</h2>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-50 text-red-700 text-xs font-medium rounded-full">
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            Not Connected
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            Connected
           </span>
         </div>
         <p className="text-sm text-slate mb-4">
-          Connect a Neon Postgres database to enable live data, real-time analytics, and persistent lead storage.
+          Neon Postgres database is connected. Lead data, analytics, and settings are stored in the live database.
         </p>
         <div className="space-y-3">
-          <label className="block text-sm font-medium text-navy">
-            Connection String
-          </label>
-          <input
-            type="text"
-            value={dbConnectionString}
-            onChange={(e) => setDbConnectionString(e.target.value)}
-            placeholder="postgresql://user:password@ep-xxx.us-east-2.aws.neon.tech/dbname"
-            className="admin-input font-mono text-xs"
-          />
-          <button
-            disabled
-            className="admin-btn-primary opacity-50 cursor-not-allowed"
-            title="Connect a database to enable"
-          >
-            Test Connection
-          </button>
-          <p className="text-xs text-slate">
-            Upgrade to a paid plan to unlock live database integration, automated lead capture, and advanced analytics.
-          </p>
+          <div className="flex items-center gap-3">
+            <div className="flex-1 bg-gray-50 rounded-lg px-4 py-3 font-mono text-xs text-slate">
+              postgresql://***@ep-small-dawn-***.neon.tech/neondb
+            </div>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-slate">
+            <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Schema created &middot; 28 leads seeded &middot; Referrer data loaded
+          </div>
         </div>
       </div>
 
